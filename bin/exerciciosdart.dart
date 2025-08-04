@@ -15,4 +15,5 @@ String getComando(){
     getComando();
   }
  return entrada;
+ 
 }
