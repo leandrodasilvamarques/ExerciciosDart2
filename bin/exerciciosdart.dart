@@ -1,6 +1,7 @@
 import 'dart:io';
 void main() {
   List<String> todoList = <String>[];
+  cabecalho();
   programa(todoList);
 }
 
@@ -10,7 +11,7 @@ String input(){
  print("1- Adicionar\n2- Listar\n3- Sair\n");
  String entrada = stdin.readLineSync()!;
 
-  if(entrada == null || !listaOpcoes.contains(entrada)){
+  if(entrada == null || entrada.isEmpty|| !listaOpcoes.contains(entrada)){
     print("Entrada invalida\n");
     input();
   }
@@ -49,4 +50,8 @@ void programa(List<String> lista){
     }
   } 
   
+}
+
+void cabecalho(){
+  print("              _            \n,             | |           \n  _ __   ___ | |_ __ _ ___ \n | '_ \ / _ \| __/ _\` / __|\n | | | | (_) | || (_| \__ \\n |_| |_|\___/ \__\__,_|___/\n                           \n                           ");
 }
